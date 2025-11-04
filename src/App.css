@@ -1,0 +1,126 @@
+/* === Container === */
+.container {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  text-align: center;
+  font-family: sans-serif;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #ccc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  margin-bottom: 20px;
+}
+
+/* === Dark Mode === */
+.container.dark {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+/* === Inputs === */
+input {
+  width: 80%;
+  margin: 10px 0;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #888;
+  border-radius: 5px;
+  text-align: right;
+  transition: 0.3s;
+}
+
+.container.dark input {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+/* === Buttons === */
+.buttons button,
+.clear button,
+.history button,
+.toggle-dark {
+  margin: 10px 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: springgreen;
+  color: #000;
+  transition: all 0.2s ease;
+}
+
+.container.dark .buttons button,
+.container.dark .clear button,
+.container.dark .history button {
+  background-color: #2e2c2c;
+  color: white;
+}
+
+.buttons button:hover,
+.clear button:hover,
+.history button:hover,
+.toggle-dark:hover {
+  background-color: #ccc;
+}
+
+.buttons button:active,
+.clear button:active,
+.history button:active,
+.toggle-dark:active {
+  transform: scale(0.95);
+}
+
+/* === Result Animation === */
+.result-animate {
+  animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* === History === */
+.history {
+  margin-top: 30px;
+  padding: 10px;
+  background-color: #000;
+  color: cyan;
+  border-radius: 8px;
+  text-align: left;
+  position: relative;
+  top: -510px;
+  left: 450px;
+  
+}
+
+.history h1 {
+  color: chartreuse;
+}
+
+.history ul {
+  list-style: none;
+  padding: 0;
+}
+
+.history li {
+  margin: 5px 0;
+  font-size: 1rem;
+}
